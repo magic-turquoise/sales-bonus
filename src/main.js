@@ -5,7 +5,7 @@
  * @returns {number}
  */
 
-function calculateSimpleRevenue(purchase, _product) {
+function calculateSimpleRevenue(purchase, _product) {    
    // @TODO: Расчет выручки от операции
    
     const { discount, sale_price, quantity } = purchase;
@@ -84,7 +84,7 @@ function analyzeSalesData(data, options) {
             revenue: 0,
             profit: 0,
             sales_count: 0,
-            top_products: [], // позже заполняем
+            top_products: [], 
             bonus: 0,
             products_sold: {},
         }));
@@ -157,8 +157,7 @@ function analyzeSalesData(data, options) {
         bonus: +seller.bonus.toFixed(2)
     }));
 
-
-    
+  
         } catch (e) {
             console.error('Ошибка:', e.message);
         }
