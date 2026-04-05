@@ -62,19 +62,24 @@ function analyzeSalesData(data, options) {
             !Array.isArray(data.customers)               ||
             !Array.isArray(data.products)                ||
             !Array.isArray(data.sellers)                 ||
-            !Array.isArray(data.purchase_records)        
-           ) {throw new Error('Некорректный формат данных');}
+            !Array.isArray(data.purchase_records)        ||
+            data.sellers.length === 0                    ||
+            data.products.length === 0                   ||
+            data.purchase_records.length === 0           
+           ) {throw new Error('Некорректные входные данные');}
 
 
-        if (data.sellers.length === 0) {
+/*        if (data.sellers.length === 0) {
             throw new Error('Массив sellers пуст');
         }
+
         if (data.products.length === 0) {
             throw new Error('Массив products пуст');
         }
+
         if (data.purchase_records.length === 0) {
             throw new Error('Массив purchase_records пуст');
-        }
+        }*/
       
         console.log('Данные в порядке:', data);
           
