@@ -64,6 +64,17 @@ function analyzeSalesData(data, options) {
             !Array.isArray(data.sellers)                 ||
             !Array.isArray(data.purchase_records)        
            ) {throw new Error('Некорректный формат данных');}
+
+
+        if (data.sellers.length === 0) {
+            throw new Error('Массив sellers пуст');
+        }
+        if (data.products.length === 0) {
+            throw new Error('Массив products пуст');
+        }
+        if (data.purchase_records.length === 0) {
+            throw new Error('Массив purchase_records пуст');
+        }
       
         console.log('Данные в порядке:', data);
           
