@@ -57,7 +57,7 @@ function calculateBonusByProfit(index, total, seller) {
  */
 function analyzeSalesData(data, options) {
     // @TODO: Проверка входных данных
-    try {
+    //try {
         if (!data                                        ||
             !Array.isArray(data.customers)               ||
             !Array.isArray(data.products)                ||
@@ -161,7 +161,9 @@ function analyzeSalesData(data, options) {
     }));
 
   
-        } catch (e) {
+        } 
+        
+        /*catch (e) {
             console.error('Ошибка:', e.message);
         }
-}
+}*/
